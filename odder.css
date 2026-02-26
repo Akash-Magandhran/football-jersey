@@ -4,7 +4,7 @@
 /* General Page Styling */
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('/photos/pexels-pixabay-274506.jpg');
+    background-image: url('photos/pexels-pixabay-274506.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
