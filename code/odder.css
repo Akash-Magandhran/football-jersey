@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+/* General Page Styling */
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/photos/pexels-pixabay-274506.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* The Main Cart Box */
+.cart-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+/* Individual Cart Item Row */
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+/* Product Image in Cart */
+.cart-item img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* Item Name and Price Section */
+.item-details {
+    flex-grow: 1;
+}
+
+/* Quantity Plus/Minus Controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons for +/- */
+.btn-qty {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 2px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-qty:hover {
+    background-color: #f0f0f0;
+}
+
+/* Remove/Trash Icon */
+.remove-btn {
+    color: #e74c3c;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+/* Billing Section at Bottom */
+.total-section {
+    text-align: right;
+    margin-top: 30px;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+}
+
+/* Buy Now / Checkout Button */
+.checkout-btn {
+    background: #000;
+    color: #fff;
+    padding: 12px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #003366;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* If Cart is Empty */
+.empty-cart {
+    text-align: center;
+    padding: 50px;
+}
+
+.akash {
+    padding: 12px 40px;
+    color: #fff;
+    background: #000;
+    position: relative;
+    right: 600px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    bottom: 40px;
+    transition: 0.3s;
+}
+
+.akash:hover {
+    background: #003366;
+    color: #fff;
+    transform: scale(1.05);
+}

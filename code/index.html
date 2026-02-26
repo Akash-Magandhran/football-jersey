@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FIFA 26 WORLD | Home</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <div class="logo">THE JERSEY HUB</div>
+                <div class="nav-links">
+                    <span class="login-text" id="openAuthText">LOGIN</span>
+                    <img src="/players/people.png" class="login-trigger" id="openAuth" alt="login" height="50px"
+                        width="50px">
+                </div>
+            </nav>
+        </header>
+
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="auth-container">
+                <span class="close-btn" id="closeBtn">&times;</span>
+
+                <div id="loginForm">
+                    <h2>LOGIN</h2>
+                    <input type="email" id="logEmail" placeholder="Email" required>
+                    <input type="password" id="logPass" placeholder="Password" required>
+                    <button class="auth-btn" onclick="handleLogin()">LOGIN</button>
+                    <p class="toggle-link" onclick="toggleAuth()">New user? Sign Up here</p>
+                </div>
+
+                <div id="signupForm" style="display: none;">
+                    <h2>SIGN UP</h2>
+                    <input type="text" id="regName" placeholder="Full Name" required>
+                    <input type="email" id="regEmail" placeholder="Email" required>
+                    <input type="password" id="regPass" placeholder="Password" required>
+                    <button class="auth-btn" onclick="handleSignup()">SIGN UP</button>
+                    <p class="toggle-link" onclick="toggleAuth()">Already have an account? Login</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="hero">
+            <h1>GEAR UP FOR THE <br> WORLD CUP 2026</h1>
+            <div class="category-container">
+                <a href="menu.html" class="cat-card">FIFA JERSEY</a>
+                <a href="clubjressy.html" class="cat-card">CLUB JERSEY</a>
+            </div>
+        </section>
+
+        <video autoplay muted loop id="bg-video">
+            <source src="/videos/back football.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+
+
+        <script>
+            const modal = document.getElementById('modalOverlay');
+            const openBtn = document.getElementById('openAuth');
+            const closeBtn = document.getElementById('closeBtn');
+            const loginSection = document.getElementById('loginForm');
+            const signupSection = document.getElementById('signupForm');
+
+            // Modal Open/Close
+            openBtn.onclick = () => modal.style.display = 'flex';
+            closeBtn.onclick = () => modal.style.display = 'none';
+            window.onclick = (event) => { if (event.target == modal) modal.style.display = 'none'; }
+
+            // Switch between Login and Signup
+            function toggleAuth() {
+                if (loginSection.style.display === "none") {
+                    loginSection.style.display = "block";
+                    signupSection.style.display = "none";
+                } else {
+                    loginSection.style.display = "none";
+                    signupSection.style.display = "block";
+                }
+            }
+
+            // SIGN UP - LocalStorage
+            function handleSignup() {
+                const name = document.getElementById('regName').value;
+                const email = document.getElementById('regEmail').value;
+                const pass = document.getElementById('regPass').value;
+
+                if (name && email && pass) {
+                    const user = { name, email, pass };
+                    localStorage.setItem(email, JSON.stringify(user));
+                    alert("Account will updated");
+                    toggleAuth();
+                } else {
+                    alert("No user Data!");
+                }
+            }
+
+            // LOGIN - LocalStorage-la check panna
+            function handleLogin() {
+                const email = document.getElementById('logEmail').value;
+                const pass = document.getElementById('logPass').value;
+
+                const storedUser = localStorage.getItem(email);
+
+                if (storedUser) {
+                    const userData = JSON.parse(storedUser);
+                    if (userData.pass === pass) {
+                        alert("Welcome " + userData.name + "! Login Success.");
+                        modal.style.display = 'none';
+
+                    } else {
+                        alert(" verify tha Password !");
+                    }
+                } else {
+                    alert("No user account create account!");
+                }
+            }
+        </script>
+    </body>
+
+    </html>
+
+</body>
+
+</html>

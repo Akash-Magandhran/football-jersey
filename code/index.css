@@ -1,0 +1,223 @@
+        /* --- UNGA PAZHAYA CSS ADHE DHAAN --- */
+        :root {
+            --neon-green: #ccff00;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-white: #ffffff;
+            --grey-text: #a0a0a0;
+        }
+
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+
+            /* Elements-a side-by-side veikka idhu mukkiyam */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Style */
+        .logo {
+            font-size: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--text-white);
+            text-decoration: none;
+            position: relative;
+            top: 20px;
+        }
+
+        /* Nav Links Container (Login Text + Image) */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            /* Text-kum emoji-kum idaila gap */
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            left: 1200px;
+            bottom: 20px;
+        }
+
+        /* Login Text Style */
+        .login-text {
+            font-size: 30px;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        /* Emoji/Icon Style */
+        .login-trigger {
+            transition: 0.3s;
+        }
+
+        /* Hover Effect for the whole Login group */
+        .nav-links:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links:hover .login-text {
+            color: #f1c40f;
+            /* Mouse vecha yellow color-la highlight aagum */
+        }
+
+        /* --- LOGIN MODAL CSS (Nee ketta Light Color Design) --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            /* Starting-la hide panni vachurukom */
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .auth-container {
+            background: #f4f4f4;
+            /* Light Color */
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            color: #333;
+            position: relative;
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+
+        .auth-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000;
+        }
+
+        .auth-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .auth-btn {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            color: var(--neon-green);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .toggle-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #555;
+            text-decoration: underline;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 25px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        /* --- REST OF YOUR CSS --- */
+        /* --- HERO SECTION ALIGNMENT --- */
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        /* --- CATEGORY BUTTONS ALIGNMENT --- */
+        .category-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cat-card {
+            border: 2px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 50px;
+            transition: 0.3s ease;
+            /* Hover panna smooth-ah aagurathuku */
+        }
+
+        .cat-card:hover {
+            background: var(--neon-green);
+            color: #000;
+        }
+
+        /* --- VIDEO BACKGROUND CSS --- */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* This keeps it behind your content */
+            object-fit: cover;
+            /* Ensures the video covers the screen without stretching */
+            filter: brightness(50%);
+            /* Optional: makes text easier to read */
+        }
+
+        /* Ensure your sections are transparent so the video shows through */
+        body {
+            background: transparent;
+        }
+
+        .hero {
+            background: transparent;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* Make sure text is visible */
+        }
