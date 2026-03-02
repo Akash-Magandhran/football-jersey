@@ -15,6 +15,18 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             background-color: var(--dark-bg);
             color: var(--text-white);
@@ -56,8 +68,8 @@
             cursor: pointer;
             transition: 0.3s ease-in-out;
             position: relative;
-            left: 1200px;
-            bottom: 20px;
+            left: 1150px;
+            bottom: 40px;
         }
 
         /* Login Text Style */
